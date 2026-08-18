@@ -108,6 +108,11 @@ export const t: Dict = {
   "footer.rights": { en: "ALL RIGHTS RESERVED", ar: "جميع الحقوق محفوظة" },
   "footer.copyright": { en: "2024 | COPYRIGHT", ar: "2024 | حقوق النشر" },
 
+  "events.title": { en: "Conferences & Events", ar: "المؤتمرات والفعاليات" },
+  "events.tab.interviews": { en: "INTERVIEWS", ar: "مقابلات" },
+  "events.tab.talks": { en: "TALKS", ar: "محاضرات" },
+  "events.tab.exhibition": { en: "EXHIBITION", ar: "معارض" },
+
   "common.theme": { en: "Toggle theme", ar: "تبديل المظهر" },
   "common.language": { en: "Toggle language", ar: "تبديل اللغة" },
   "common.menu": { en: "Menu", ar: "القائمة" },

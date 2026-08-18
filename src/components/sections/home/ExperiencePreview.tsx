@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, MessageSquare, ChevronRight, ArrowRight } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 const eventsData = [
   {
@@ -41,7 +42,7 @@ export function ExperiencePreview() {
       <div className="mx-auto max-w-5xl">
         {/* Title */}
         <h2 className="font-['Oswald',sans-serif] text-4xl sm:text-5xl md:text-6xl font-bold text-center text-foreground mb-8 tracking-tight">
-          Conferences & Events
+          {tr("events.title")}
         </h2>
 
         {/* Filter Tabs */}

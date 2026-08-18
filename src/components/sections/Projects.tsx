@@ -3,8 +3,10 @@ import { Link } from "@tanstack/react-router";
 import { Code2, ExternalLink, Rocket } from "lucide-react";
 import { projects } from "@/data";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { useI18n } from "@/lib/i18n";
 
 export function Projects() {
+  const { tr } = useI18n();
   // Grab the first 3 projects as featured for the homepage
   const featuredWorks = projects.slice(0, 3);
   
@@ -98,7 +100,7 @@ export function Projects() {
                     className="inline-flex items-center gap-3 rounded-full bg-background px-6 py-3 shadow-md border border-border transition-transform hover:scale-105 w-full justify-center group/btn"
                   >
                     <span className="font-sans text-[10px] font-black tracking-[0.2em] text-foreground uppercase group-hover/btn:text-primary transition-colors">
-                      VIEW PROJECT
+                      {tr("projects.preview.view")}
                     </span>
                     <ArrowRightIcon className="size-3 text-foreground group-hover/btn:text-primary transition-colors group-hover/btn:translate-x-1 rtl:rotate-180" />
                   </Link>
