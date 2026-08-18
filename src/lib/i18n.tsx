@@ -102,37 +102,62 @@ export const t: Dict = {
     ar: "بلا ضغط — رد خلال 24 ساعة.",
   },
   "welcome.close": { en: "Close welcome message", ar: "إغلاق رسالة الترحيب" },
+
+  "footer.headline1": { en: "You can find", ar: "يمكنك أن تجدني" },
+  "footer.headline2": { en: "me here:", ar: "هنا:" },
+  "footer.rights": { en: "ALL RIGHTS RESERVED", ar: "جميع الحقوق محفوظة" },
+  "footer.copyright": { en: "2024 | COPYRIGHT", ar: "2024 | حقوق النشر" },
+
+  "common.theme": { en: "Toggle theme", ar: "تبديل المظهر" },
+  "common.language": { en: "Toggle language", ar: "تبديل اللغة" },
+  "common.menu": { en: "Menu", ar: "القائمة" },
+  "common.home": { en: "Home", ar: "الرئيسية" },
 };
 
 interface I18nContextValue {
   lang: Lang;
   dir: "ltr" | "rtl";
+  isRTL: boolean;
+  setLang: (lang: Lang) => void;
   toggleLang: () => void;
   tr: (key: keyof typeof t | string) => string;
 }
 
 const I18nContext = createContext<I18nContextValue | undefined>(undefined);
 
+const STORAGE_KEY = "lang";
+
+/** Runs before hydration so the first paint already has the right lang/dir. */
+export const langBootstrapScript = `(function(){try{var l=localStorage.getItem("${STORAGE_KEY}");if(l!=="ar"&&l!=="en"){l=(navigator.language||"en").toLowerCase().indexOf("ar")===0?"ar":"en";}var r=document.documentElement;r.lang=l;r.dir=l==="ar"?"rtl":"ltr";}catch(e){}})();`;
+
+function readInitialLang(): Lang {
+  if (typeof document === "undefined") return "en";
+  return document.documentElement.lang === "ar" ? "ar" : "en";
+}
+
 export function I18nProvider({ children }: { children: ReactNode }) {
+  // SSR renders "en"; the bootstrap script already set <html lang/dir>, and this
+  // effect syncs React state right after hydration (no mismatch warnings).
   const [lang, setLang] = useState<Lang>("en");
 
   useEffect(() => {
-    const stored = localStorage.getItem("lang") as Lang | null;
-    if (stored) setLang(stored);
+    const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
+    setLang(stored === "ar" || stored === "en" ? stored : readInitialLang());
   }, []);
 
   useEffect(() => {
     const root = document.documentElement;
     root.lang = lang;
     root.dir = lang === "ar" ? "rtl" : "ltr";
-    localStorage.setItem("lang", lang);
+    localStorage.setItem(STORAGE_KEY, lang);
   }, [lang]);
 
   const toggleLang = () => setLang((l) => (l === "en" ? "ar" : "en"));
   const tr = (key: string) => t[key]?.[lang] ?? key;
+  const dir = lang === "ar" ? ("rtl" as const) : ("ltr" as const);
 
   return (
-    <I18nContext.Provider value={{ lang, dir: lang === "ar" ? "rtl" : "ltr", toggleLang, tr }}>
+    <I18nContext.Provider value={{ lang, dir, isRTL: dir === "rtl", setLang, toggleLang, tr }}>
       {children}
     </I18nContext.Provider>
   );
