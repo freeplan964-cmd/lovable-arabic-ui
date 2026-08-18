@@ -128,7 +128,7 @@ export function ProjectsPage() {
                   <label htmlFor="project-search" className="sr-only">
                     Search projects
                   </label>
-                  <Search className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-card-foreground/70" />
+                  <Search className="pointer-events-none absolute start-4 top-1/2 size-4 -translate-y-1/2 text-card-foreground/70" />
                   <input
                     id="project-search"
                     type="search"
@@ -142,7 +142,7 @@ export function ProjectsPage() {
                       type="button"
                       onClick={() => setSearchQuery("")}
                       aria-label="Clear search"
-                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-1 text-card-foreground/70 hover:text-card-foreground transition-colors"
+                      className="absolute end-3 top-1/2 -translate-y-1/2 rounded-lg p-1 text-card-foreground/70 hover:text-card-foreground transition-colors"
                     >
                       <X className="size-4" />
                     </button>

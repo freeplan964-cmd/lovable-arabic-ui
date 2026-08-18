@@ -45,12 +45,12 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Timeline line */}
-          <div className="absolute bottom-0 left-5 top-0 w-0.5 bg-gradient-to-b from-accent via-accent/50 to-transparent sm:left-8 md:left-1/2 md:-translate-x-1/2" />
+          <div className="absolute bottom-0 start-5 top-0 w-0.5 bg-gradient-to-b from-accent via-accent/50 to-transparent sm:start-8 md:left-1/2 md:-translate-x-1/2" />
 
           {experience.map((item, index) => (
             <motion.div key={item.company} className="relative" variants={itemVariants}>
               {/* Timeline dot */}
-              <div className="absolute left-0 top-4 z-10 md:left-1/2 md:-translate-x-1/2">
+              <div className="absolute start-0 top-4 z-10 md:left-1/2 md:-translate-x-1/2">
                 <div className="flex size-11 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-accent to-accent/80 shadow-lg shadow-accent/20 sm:size-16">
                   <Briefcase className="size-5 text-accent-foreground sm:size-7" />
                 </div>
@@ -58,12 +58,12 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
 
               {/* Content card */}
               <div
-                className={`ml-14 sm:ml-24 md:w-1/2 ${index % 2 === 1 ? "md:ms-auto md:me-0 md:pe-12" : "md:ms-0 md:ps-12"}`}
+                className={`ms-14 sm:ms-24 md:w-1/2 ${index % 2 === 1 ? "md:ms-auto md:me-0 md:pe-12" : "md:ms-0 md:ps-12"}`}
               >
                 <Reveal delay={index * 0.1}>
                   <div className="group bg-card border border-border relative overflow-hidden rounded-[2rem] p-4 shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-2 sm:p-6 md:p-8">
                     {/* Accent corner */}
-                    <div className="absolute -right-12 -top-12 size-32 rounded-full bg-accent/5 blur-3xl transition-all duration-500 group-hover:bg-accent/10" />
+                    <div className="absolute -end-12 -top-12 size-32 rounded-full bg-accent/5 blur-3xl transition-all duration-500 group-hover:bg-accent/10" />
 
                     {/* Content */}
                     <div className="relative z-10">
@@ -111,7 +111,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
                       </ul>
 
                       {/* Hover indicator */}
-                      <div className="absolute -right-1 top-1/2 h-12 w-1 -translate-y-1/2 bg-gradient-to-b from-transparent via-accent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="absolute -end-1 top-1/2 h-12 w-1 -translate-y-1/2 bg-gradient-to-b from-transparent via-accent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     </div>
                   </div>
                 </Reveal>

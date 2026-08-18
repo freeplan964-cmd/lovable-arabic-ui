@@ -190,7 +190,7 @@ export function ProjectCardImage({
         imgClassName="transition-transform duration-700 ease-out group-hover:scale-110"
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-      <span className="absolute left-3 top-3 rounded-full bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
+      <span className="absolute start-3 top-3 rounded-full bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
         {project.category}
       </span>
     </div>

@@ -57,7 +57,7 @@ export function Projects() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                     {/* Top-Right Badge Overlay */}
-                    <div className="absolute top-3 right-3 rounded-full bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
+                    <div className="absolute top-3 end-3 rounded-full bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
                       {project.type}
                     </div>
                   </div>
