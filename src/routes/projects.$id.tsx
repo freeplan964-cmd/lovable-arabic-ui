@@ -248,7 +248,7 @@ export function ProjectDetail() {
                 <Link
                   to="/projects/$id"
                   params={{ id: nextProject.id }}
-                  className="group relative overflow-hidden rounded-[2rem] bg-card p-8 border border-border shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 text-right"
+                  className="group relative overflow-hidden rounded-[2rem] bg-card p-8 border border-border shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 text-end"
                 >
                   <div className="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col items-end">

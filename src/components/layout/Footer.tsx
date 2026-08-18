@@ -63,7 +63,7 @@ export function Footer() {
 
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6 relative z-10">
               {/* Headline */}
-              <h2 className="font-['Oswald',sans-serif] text-4xl sm:text-5xl md:text-[56px] font-bold leading-[0.92] text-card-foreground tracking-normal text-center md:text-left">
+              <h2 className="font-['Oswald',sans-serif] text-4xl sm:text-5xl md:text-[56px] font-bold leading-[0.92] text-card-foreground tracking-normal text-center md:text-start">
                 You can find
                 <br />
                 me here:
@@ -92,7 +92,7 @@ export function Footer() {
                     />
                     {featured && (
                       <span className="absolute -bottom-3 grid size-6 sm:size-7 place-items-center rounded-full bg-card shadow-md border border-border">
-                        <Play className="size-3 sm:size-3.5 fill-primary text-primary ml-0.5" />
+                        <Play className="size-3 sm:size-3.5 fill-primary text-primary ms-0.5" />
                       </span>
                     )}
                   </a>
@@ -122,7 +122,7 @@ export function Footer() {
               </div>
 
               {/* Spaced MOSTAFA SAMIR Text */}
-              <div className="flex flex-col text-left font-sans text-[10px] sm:text-[11px] font-black tracking-[0.22em] text-foreground leading-tight uppercase">
+              <div className="flex flex-col text-start font-sans text-[10px] sm:text-[11px] font-black tracking-[0.22em] text-foreground leading-tight uppercase">
                 <span>MOSTAFA</span>
                 <span>SAMIR</span>
               </div>
@@ -142,7 +142,7 @@ export function Footer() {
             </nav>
 
             {/* Copyright */}
-            <p className="text-center md:text-right font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-foreground/80 uppercase leading-tight">
+            <p className="text-center md:text-end font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-foreground/80 uppercase leading-tight">
               2024 | COPYRIGHT
               <br />
               ALL RIGHTS RESERVED

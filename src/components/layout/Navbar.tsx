@@ -42,7 +42,7 @@ export function Navbar() {
           </div>
 
           {/* MOSTAFA SAMIR Text */}
-          <div className="flex flex-col text-left font-sans text-[9px] font-black tracking-[0.2em] text-foreground leading-tight uppercase">
+          <div className="flex flex-col text-start font-sans text-[9px] font-black tracking-[0.2em] text-foreground leading-tight uppercase">
             <span>MOSTAFA</span>
             <span>SAMIR</span>
           </div>

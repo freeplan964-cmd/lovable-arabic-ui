@@ -58,7 +58,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
 
               {/* Content card */}
               <div
-                className={`ml-14 sm:ml-24 md:w-1/2 ${index % 2 === 1 ? "md:ml-auto md:mr-0 md:pr-12" : "md:ml-0 md:pl-12"}`}
+                className={`ml-14 sm:ml-24 md:w-1/2 ${index % 2 === 1 ? "md:ms-auto md:me-0 md:pe-12" : "md:ms-0 md:ps-12"}`}
               >
                 <Reveal delay={index * 0.1}>
                   <div className="group bg-card border border-border relative overflow-hidden rounded-[2rem] p-4 shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-2 sm:p-6 md:p-8">

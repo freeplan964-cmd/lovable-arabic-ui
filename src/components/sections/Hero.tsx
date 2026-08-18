@@ -10,7 +10,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-background pb-16 pt-32 sm:pt-36 md:pt-40 text-foreground select-none">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 lg:grid-cols-2">
         {/* Left Column Text & Action */}
-        <div className="relative z-10 text-center lg:text-left">
+        <div className="relative z-10 text-center lg:text-start">
           {/* Eyebrow Label */}
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -55,7 +55,7 @@ export function Hero() {
               className="group inline-flex items-center gap-3 rounded-full bg-card px-7 py-3.5 shadow-lg border border-border transition-all duration-300 hover:scale-105 hover:shadow-xl mt-4"
             >
               <span className="grid size-7 place-items-center rounded-full bg-primary text-primary-foreground shadow-sm transition-transform duration-300 group-hover:rotate-12">
-                <Play className={`size-3.5 fill-primary-foreground text-primary-foreground ${dir === 'rtl' ? 'mr-0.5 rotate-180' : 'ml-0.5'}`} />
+                <Play className={`size-3.5 fill-primary-foreground text-primary-foreground ${dir === 'rtl' ? 'me-0.5 rotate-180' : 'ms-0.5'}`} />
               </span>
               <span className="font-sans text-xs font-black tracking-[0.2em] text-card-foreground uppercase">
                 {tr("hero.cta")}

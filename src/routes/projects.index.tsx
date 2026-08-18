@@ -107,7 +107,7 @@ export function ProjectsPage() {
         <section className="pb-16 pt-28 md:pb-20 md:pt-32">
           <div className="mx-auto max-w-6xl px-5">
             <Reveal>
-              <header className="mb-10 max-w-2xl text-center md:text-left">
+              <header className="mb-10 max-w-2xl text-center md:text-start">
                 <span className="rounded-full bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-3">
                   PORTFOLIO & CASE STUDIES
                 </span>
@@ -135,7 +135,7 @@ export function ProjectsPage() {
                     placeholder="Search by name, tech, client…"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="h-11 w-full rounded-xl border border-border bg-foreground/10 pl-11 pr-9 text-sm text-card-foreground placeholder:text-card-foreground/60 transition-all focus:border-foreground/40 focus:bg-foreground/15 focus:outline-none"
+                    className="h-11 w-full rounded-xl border border-border bg-foreground/10 ps-11 pe-9 text-sm text-card-foreground placeholder:text-card-foreground/60 transition-all focus:border-foreground/40 focus:bg-foreground/15 focus:outline-none"
                   />
                   {searchQuery && (
                     <button
@@ -160,7 +160,7 @@ export function ProjectsPage() {
                       aria-label="Sort projects"
                       className="h-11 w-full gap-2 rounded-xl border-border bg-foreground/10 px-3.5 text-sm font-bold text-card-foreground shadow-none transition-all hover:bg-foreground/15 focus:ring-0 md:w-48"
                     >
-                      <div className="flex min-w-0 flex-1 items-center gap-2 whitespace-nowrap text-left">
+                      <div className="flex min-w-0 flex-1 items-center gap-2 whitespace-nowrap text-start">
                         <ArrowUpDown className="size-4 shrink-0 text-primary" />
                         <SelectValue />
                       </div>
@@ -210,7 +210,7 @@ export function ProjectsPage() {
                 >
                   {f}
                   {counts[f] != null && (
-                    <span className="ml-1.5 text-[10px] opacity-80">({counts[f]})</span>
+                    <span className="ms-1.5 text-[10px] opacity-80">({counts[f]})</span>
                   )}
                 </button>
               ))}

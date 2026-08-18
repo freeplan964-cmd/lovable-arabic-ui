@@ -24,7 +24,7 @@ export function AboutPreview() {
                     MS
                   </span>
                 </div>
-                <div className="flex flex-col text-left font-sans text-[9px] font-black tracking-[0.2em] text-foreground leading-tight uppercase">
+                <div className="flex flex-col text-start font-sans text-[9px] font-black tracking-[0.2em] text-foreground leading-tight uppercase">
                   <span>MOSTAFA</span>
                   <span>SAMIR</span>
                 </div>
@@ -48,7 +48,7 @@ export function AboutPreview() {
                 className="group inline-flex items-center gap-3 rounded-full bg-background px-6 py-3 shadow-md border border-border transition-transform hover:scale-105"
               >
                 <span className="grid size-6 place-items-center rounded-full bg-primary text-primary-foreground">
-                  <Play className="size-3 fill-primary-foreground text-primary-foreground ml-0.5" />
+                  <Play className="size-3 fill-primary-foreground text-primary-foreground ms-0.5" />
                 </span>
                 <span className="font-sans text-xs font-black tracking-[0.2em] text-foreground uppercase">
                   VIEW CASE
