@@ -36,12 +36,13 @@ const eventsData = [
 
 export function ExperiencePreview() {
   const [activeTab, setActiveTab] = useState("TALKS");
+  const { tr } = useI18n();
 
   return (
     <section id="events" className="w-full bg-background py-20 px-4 sm:px-8 md:px-12 text-foreground select-none">
       <div className="mx-auto max-w-5xl">
         {/* Title */}
-        <h2 className="font-['Oswald',sans-serif] text-4xl sm:text-5xl md:text-6xl font-bold text-center text-foreground mb-8 tracking-tight">
+        <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-center text-foreground mb-8 tracking-tight">
           {tr("events.title")}
         </h2>
 
