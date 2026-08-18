@@ -57,7 +57,7 @@ export function ProjectCard({ project, index, view = "grid" }: ProjectCardProps)
             className="inline-flex items-center gap-2 font-sans text-xs font-black tracking-widest text-primary uppercase transition-all hover:gap-3"
           >
             View details
-            <ArrowRight className="size-4" />
+            <ArrowRight className="size-4 rtl:rotate-180" />
           </Link>
           <div className="flex shrink-0 items-center gap-2">
             {project.live && project.live !== "#" && (
@@ -107,7 +107,7 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
             className="inline-flex items-center gap-2 font-sans text-xs font-black tracking-widest text-primary uppercase transition-all hover:gap-3"
           >
             View details
-            <ArrowRight className="size-4" />
+            <ArrowRight className="size-4 rtl:rotate-180" />
           </Link>
           {project.live && project.live !== "#" && (
             <IconLink href={project.live} label={`Open live site for ${project.title}`}>

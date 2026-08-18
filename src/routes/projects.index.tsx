@@ -264,7 +264,7 @@ export function ProjectsPage() {
                       disabled={page === 1}
                       className="inline-flex items-center gap-2 rounded-xl bg-foreground/10 border border-border px-4 py-2 text-xs font-black tracking-wider text-foreground transition-all disabled:opacity-40 hover:enabled:bg-foreground/20"
                     >
-                      <ChevronLeft className="size-4 text-primary" />
+                      <ChevronLeft className="size-4 text-primary rtl:rotate-180" />
                       Previous
                     </button>
 
@@ -291,7 +291,7 @@ export function ProjectsPage() {
                       className="inline-flex items-center gap-2 rounded-xl bg-foreground/10 border border-border px-4 py-2 text-xs font-black tracking-wider text-foreground transition-all disabled:opacity-40 hover:enabled:bg-foreground/20"
                     >
                       Next
-                      <ChevronRight className="size-4 text-primary" />
+                      <ChevronRight className="size-4 text-primary rtl:rotate-180" />
                     </button>
                   </nav>
                 )}

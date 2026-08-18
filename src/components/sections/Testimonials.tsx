@@ -28,14 +28,14 @@ export function Testimonials() {
                 className="grid size-11 place-items-center rounded-full bg-foreground/10 border border-border text-foreground hover:bg-foreground/20 transition-all"
                 aria-label="Previous Award"
               >
-                <ChevronLeft className="size-5" />
+                <ChevronLeft className="size-5 rtl:rotate-180" />
               </button>
               <button
                 onClick={() => setActiveIdx((i) => (i < 2 ? i + 1 : 0))}
                 className="grid size-11 place-items-center rounded-full bg-foreground/10 border border-border text-foreground hover:bg-foreground/20 transition-all"
                 aria-label="Next Award"
               >
-                <ChevronRight className="size-5" />
+                <ChevronRight className="size-5 rtl:rotate-180" />
               </button>
             </div>
           </div>

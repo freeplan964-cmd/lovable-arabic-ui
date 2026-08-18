@@ -42,7 +42,7 @@ export function ProjectDetail() {
             to="/projects"
             className="inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
           >
-            <ArrowLeft className="size-4" />
+            <ArrowLeft className="size-4 rtl:rotate-180" />
             Back to Projects
           </Link>
         </div>
@@ -73,7 +73,7 @@ export function ProjectDetail() {
               to="/projects" 
               className="group inline-flex items-center gap-2 text-xs font-black tracking-widest uppercase text-foreground/60 hover:text-primary transition-colors"
             >
-              <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1" />
+              <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1 rtl:rotate-180" />
               Back to all projects
             </Link>
           </div>
@@ -234,7 +234,7 @@ export function ProjectDetail() {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10">
                     <div className="flex items-center gap-2 font-sans text-[10px] font-black tracking-widest text-primary uppercase mb-3">
-                      <ArrowLeft className="size-3" /> PREVIOUS PROJECT
+                      <ArrowLeft className="size-3 rtl:rotate-180" /> PREVIOUS PROJECT
                     </div>
                     <h4 className="font-display text-2xl md:text-3xl font-black uppercase text-card-foreground">
                       {prevProject.title}
@@ -253,7 +253,7 @@ export function ProjectDetail() {
                   <div className="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col items-end">
                     <div className="flex items-center gap-2 font-sans text-[10px] font-black tracking-widest text-primary uppercase mb-3">
-                      NEXT PROJECT <ArrowRight className="size-3" />
+                      NEXT PROJECT <ArrowRight className="size-3 rtl:rotate-180" />
                     </div>
                     <h4 className="font-display text-2xl md:text-3xl font-black uppercase text-card-foreground">
                       {nextProject.title}

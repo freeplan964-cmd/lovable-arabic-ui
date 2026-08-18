@@ -101,7 +101,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
                             viewport={{ once: true }}
                           >
                             <div className="mt-1.5 shrink-0">
-                              <ChevronRight className="size-4 text-accent/60 transition-all duration-300 group-hover/item:text-accent group-hover/item:translate-x-0.5" />
+                              <ChevronRight className="size-4 text-accent/60 transition-all duration-300 group-hover/item:text-accent group-hover/item:translate-x-0.5 rtl:rotate-180" />
                             </div>
                             <span className="transition-colors duration-300 group-hover/item:text-foreground">
                               {point}

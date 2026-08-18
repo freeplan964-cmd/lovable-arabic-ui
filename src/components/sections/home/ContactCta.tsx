@@ -25,7 +25,7 @@ export function ContactCta() {
                 className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-sans text-xs font-black tracking-widest text-primary-foreground uppercase shadow-md transition-all hover:scale-105"
               >
                 Start a conversation
-                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" />
               </Link>
               <a
                 href="mailto:m.ssaid356@gmail.com"

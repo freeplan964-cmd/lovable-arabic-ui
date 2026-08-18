@@ -96,14 +96,14 @@ function SkillsPage() {
               className="inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
             >
               See Projects
-              <ArrowRight className="size-4" />
+              <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-sans text-xs font-black tracking-widest text-primary-foreground uppercase shadow-md hover:scale-105 transition-transform"
             >
               Work With Me
-              <ArrowRight className="size-4" />
+              <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
           </div>
         </section>

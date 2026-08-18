@@ -19,7 +19,7 @@ export function PageHeader({
             to="/"
             className="inline-flex items-center gap-1.5 eyebrow text-muted-foreground transition-colors hover:text-accent"
           >
-            <ChevronLeft className="size-4" />
+            <ChevronLeft className="size-4 rtl:rotate-180" />
             Back home
           </Link>
         </Reveal>

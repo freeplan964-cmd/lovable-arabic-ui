@@ -100,7 +100,7 @@ export function Projects() {
                     <span className="font-sans text-[10px] font-black tracking-[0.2em] text-foreground uppercase group-hover/btn:text-primary transition-colors">
                       VIEW PROJECT
                     </span>
-                    <ArrowRightIcon className="size-3 text-foreground group-hover/btn:text-primary transition-colors group-hover/btn:translate-x-1" />
+                    <ArrowRightIcon className="size-3 text-foreground group-hover/btn:text-primary transition-colors group-hover/btn:translate-x-1 rtl:rotate-180" />
                   </Link>
                 </div>
               </motion.div>

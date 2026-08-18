@@ -107,10 +107,10 @@ export function ExperiencePreview() {
 
                 {featured ? (
                   <button className="grid size-10 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm hover:scale-105 transition-transform">
-                    <ArrowRight className="size-4 stroke-[3]" />
+                    <ArrowRight className="size-4 stroke-[3] rtl:rotate-180" />
                   </button>
                 ) : (
-                  <ChevronRight className="size-5 opacity-60" />
+                  <ChevronRight className="size-5 opacity-60 rtl:rotate-180" />
                 )}
               </div>
             </div>
