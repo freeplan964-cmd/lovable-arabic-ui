@@ -13,7 +13,7 @@ import { Toaster } from "sonner";
 import appCss from "../styles.css?url";
 import { describeError } from "@/lib/error-capture";
 import { ThemeProvider } from "@/lib/theme";
-import { I18nProvider } from "@/lib/i18n";
+import { I18nProvider, langBootstrapScript } from "@/lib/i18n";
 import { useSmoothScroll } from "@/lib/smooth-scroll";
 import { WelcomeModal } from "@/components/ui/WelcomeModal";
 
