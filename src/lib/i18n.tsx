@@ -36,6 +36,11 @@ export const t: Dict = {
   "experience.preview.cta": { en: "VIEW ALL AWARDS", ar: "عرض جميع الجوائز" },
   "experience.preview.selected": { en: "SELECTED WORKS", ar: "أعمال مختارة" },
 
+  "projects.index.eyebrow": { en: "PORTFOLIO & CASE STUDIES", ar: "أعمال ودراسات حالة" },
+  "projects.index.showing": { en: "Showing", ar: "عرض" },
+  "projects.index.projectsWord": { en: "projects", ar: "مشروع" },
+  "projects.index.page": { en: "page", ar: "صفحة" },
+  "projects.card.details": { en: "View details", ar: "عرض التفاصيل" },
   "projects.index.title": { en: "All Projects", ar: "جميع المشاريع" },
   "projects.index.desc": { 
     en: "Marketplaces, .NET 8 microservices, real-time dashboards, and multi-tenant architectures.", 

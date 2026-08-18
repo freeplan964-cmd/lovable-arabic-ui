@@ -9,6 +9,7 @@ import { ProjectGridSkeleton, PageSkeleton } from "@/components/ui/Skeletons";
 import { Search, ChevronLeft, ChevronRight, LayoutGrid, Rows3, X, ArrowUpDown } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { useI18n } from "@/lib/i18n";
 import {
   Select,
   SelectContent,
@@ -52,6 +53,7 @@ const SORTS = [
 type SortValue = (typeof SORTS)[number]["value"];
 
 export function ProjectsPage() {
+  const { tr } = useI18n();
   const [filter, setFilter] = useState<(typeof projectFilters)[number]>("All");
   const [searchQuery, setSearchQuery] = useState("");
   const deferredQuery = useDeferredValue(searchQuery);
@@ -109,13 +111,13 @@ export function ProjectsPage() {
             <Reveal>
               <header className="mb-10 max-w-2xl text-center md:text-start">
                 <span className="rounded-full bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-3">
-                  PORTFOLIO & CASE STUDIES
+                  {tr("projects.index.eyebrow")}
                 </span>
-                <h1 className="font-['Oswald',sans-serif] text-4xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight uppercase">
-                  All Projects
+                <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight uppercase">
+                  {tr("projects.index.title")}
                 </h1>
                 <p className="mt-3 font-sans text-sm sm:text-base text-foreground/90">
-                  Marketplaces, .NET 8 microservices, real-time dashboards, and multi-tenant architectures.
+                  {tr("projects.index.desc")}
                 </p>
               </header>
             </Reveal>
@@ -219,9 +221,10 @@ export function ProjectsPage() {
             {/* Results Count & Reset Button */}
             <div className="mb-8 flex flex-wrap items-center justify-between gap-3 text-sm text-foreground/90 font-medium">
               <p>
-                Showing <span className="font-bold text-foreground">{filtered.length}</span>{" "}
-                {filtered.length === 1 ? "project" : "projects"}
-                {totalPages > 1 && ` · page ${page} of ${totalPages}`}
+                {tr("projects.index.showing")}{" "}
+                <span className="font-bold text-foreground">{filtered.length}</span>{" "}
+                {tr("projects.index.projectsWord")}
+                {totalPages > 1 && ` · ${tr("projects.index.page")} ${page} / ${totalPages}`}
               </p>
               {hasActiveFilters && (
                 <button

@@ -5,6 +5,7 @@ import type { Project } from "@/data/projects";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { IMAGE_SIZES } from "@/lib/image";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n";
 
 export type ProjectView = "grid" | "list";
 
@@ -15,6 +16,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index, view = "grid" }: ProjectCardProps) {
+  const { tr } = useI18n();
   if (view === "list") return <ProjectRow project={project} index={index} />;
 
   return (
@@ -56,7 +58,7 @@ export function ProjectCard({ project, index, view = "grid" }: ProjectCardProps)
             params={{ id: project.id }}
             className="inline-flex items-center gap-2 font-sans text-xs font-black tracking-widest text-primary uppercase transition-all hover:gap-3"
           >
-            View details
+            {tr("projects.card.details")}
             <ArrowRight className="size-4 rtl:rotate-180" />
           </Link>
           <div className="flex shrink-0 items-center gap-2">
@@ -106,7 +108,7 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
             params={{ id: project.id }}
             className="inline-flex items-center gap-2 font-sans text-xs font-black tracking-widest text-primary uppercase transition-all hover:gap-3"
           >
-            View details
+            {tr("projects.card.details")}
             <ArrowRight className="size-4 rtl:rotate-180" />
           </Link>
           {project.live && project.live !== "#" && (
