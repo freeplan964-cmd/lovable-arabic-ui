@@ -58,7 +58,7 @@ export function ExperiencePreview() {
                   : "bg-foreground/10 text-foreground border border-border hover:bg-foreground/20"
               }`}
             >
-              {tab}
+              {tr(`events.tab.${tab.toLowerCase()}`)}
             </button>
           ))}
         </div>
