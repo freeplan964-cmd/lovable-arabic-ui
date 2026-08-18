@@ -23,7 +23,7 @@ export function Navbar() {
         <Link
           to="/"
           className="group flex items-center gap-2.5 rounded-full bg-card text-card-foreground px-4 py-2 shadow-md border border-border transition-transform hover:scale-105 select-none"
-          aria-label="Home"
+          aria-label={tr("common.home")}
         >
           {/* Prefix dots */}
           <div className="flex items-end gap-[2px] opacity-90">
@@ -36,13 +36,13 @@ export function Navbar() {
 
           {/* MS Red Square */}
           <div className="grid place-items-center rounded-[5px] bg-[#FF4B35] px-2 py-0.5 shadow-sm">
-            <span className="font-['Oswald',sans-serif] text-sm font-bold leading-none text-white tracking-tighter">
+            <span className="keep-latin font-['Oswald',sans-serif] text-sm font-bold leading-none text-white tracking-tighter">
               MS
             </span>
           </div>
 
           {/* MOSTAFA SAMIR Text */}
-          <div className="flex flex-col text-start font-sans text-[9px] font-black tracking-[0.2em] text-foreground leading-tight uppercase">
+          <div className="keep-latin flex flex-col text-start font-sans text-[9px] font-black tracking-[0.2em] text-foreground leading-tight uppercase">
             <span>MOSTAFA</span>
             <span>SAMIR</span>
           </div>
@@ -66,7 +66,7 @@ export function Navbar() {
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            aria-label="Toggle theme"
+            aria-label={tr("common.theme")}
             className="grid size-9 place-items-center rounded-full bg-foreground/10 border border-border text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
             title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
@@ -76,7 +76,7 @@ export function Navbar() {
           {/* Language Switcher */}
           <button
             onClick={toggleLang}
-            aria-label="Toggle language"
+            aria-label={tr("common.language")}
             className="flex h-9 items-center gap-1.5 rounded-full bg-foreground/10 border border-border px-3 text-xs font-extrabold text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
             title="Switch Language"
           >
@@ -109,7 +109,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen((o) => !o)}
-            aria-label="Menu"
+            aria-label={tr("common.menu")}
             className="grid size-10 place-items-center rounded-full bg-foreground/10 border border-border text-foreground md:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}

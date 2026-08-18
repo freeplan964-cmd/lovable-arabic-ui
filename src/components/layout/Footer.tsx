@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, MessageSquare, Play } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { useI18n } from "@/lib/i18n";
 
 const socials = [
   {
@@ -31,13 +32,15 @@ const socials = [
 ];
 
 const footerNavLinks = [
-  { label: "WORKS", to: "/projects" },
-  { label: "ABOUT", to: "/about" },
-  { label: "AWARDS", to: "/experience" },
-  { label: "CONTACTS", to: "/contact" },
+  { key: "nav.works", to: "/projects" },
+  { key: "nav.about", to: "/about" },
+  { key: "nav.experience", to: "/experience" },
+  { key: "nav.contact", to: "/contact" },
 ] as const;
 
 export function Footer() {
+  const { tr } = useI18n();
+
   return (
     <footer className="w-full text-foreground font-sans select-none overflow-hidden pt-2">
       {/* Stepped Top Edge Transition */}
@@ -64,9 +67,9 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6 relative z-10">
               {/* Headline */}
               <h2 className="font-['Oswald',sans-serif] text-4xl sm:text-5xl md:text-[56px] font-bold leading-[0.92] text-card-foreground tracking-normal text-center md:text-start">
-                You can find
+                {tr("footer.headline1")}
                 <br />
-                me here:
+                {tr("footer.headline2")}
               </h2>
 
               {/* Social Icons Row */}
@@ -116,13 +119,13 @@ export function Footer() {
 
               {/* MS Square Badge */}
               <div className="grid place-items-center rounded-[8px] bg-foreground px-2.5 py-1 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                <span className="font-['Oswald',sans-serif] text-xl sm:text-2xl font-bold leading-none text-background tracking-tighter">
+                <span className="keep-latin font-['Oswald',sans-serif] text-xl sm:text-2xl font-bold leading-none text-background tracking-tighter">
                   MS
                 </span>
               </div>
 
               {/* Spaced MOSTAFA SAMIR Text */}
-              <div className="flex flex-col text-start font-sans text-[10px] sm:text-[11px] font-black tracking-[0.22em] text-foreground leading-tight uppercase">
+              <div className="keep-latin flex flex-col text-start font-sans text-[10px] sm:text-[11px] font-black tracking-[0.22em] text-foreground leading-tight uppercase">
                 <span>MOSTAFA</span>
                 <span>SAMIR</span>
               </div>
@@ -132,20 +135,20 @@ export function Footer() {
             <nav className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10">
               {footerNavLinks.map((item) => (
                 <Link
-                  key={item.label}
+                  key={item.key}
                   to={item.to}
                   className="font-sans text-xs sm:text-sm font-extrabold tracking-[0.25em] text-foreground transition-opacity duration-200 hover:opacity-75 uppercase"
                 >
-                  {item.label}
+                  {tr(item.key)}
                 </Link>
               ))}
             </nav>
 
             {/* Copyright */}
             <p className="text-center md:text-end font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-foreground/80 uppercase leading-tight">
-              2024 | COPYRIGHT
+              {tr("footer.copyright")}
               <br />
-              ALL RIGHTS RESERVED
+              {tr("footer.rights")}
             </p>
           </div>
         </div>
