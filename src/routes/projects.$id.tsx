@@ -45,7 +45,7 @@ export function ProjectDetail() {
             className="inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
           >
             <ArrowLeft className="size-4 rtl:rotate-180" />
-            Back to Projects
+            {tr("project.detail.back")}
           </Link>
         </div>
         <Footer />
@@ -76,7 +76,7 @@ export function ProjectDetail() {
               className="group inline-flex items-center gap-2 text-xs font-black tracking-widest uppercase text-foreground/60 hover:text-primary transition-colors"
             >
               <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1 rtl:rotate-180" />
-              Back to all projects
+              {tr("project.detail.backAll")}
             </Link>
           </div>
 
@@ -138,7 +138,7 @@ export function ProjectDetail() {
                     <Code2 className="size-8" />
                   </div>
                   <h2 className="font-display text-3xl md:text-4xl font-black uppercase">
-                    Architecture & Tech
+                    {tr("project.detail.arch")}
                   </h2>
                 </div>
                 <div className="bg-card border border-border p-8 rounded-[2rem] shadow-[var(--shadow-glow)]">
