@@ -459,3 +459,15 @@
     color: var(--accent-foreground);
   }
 }
+
+/* Outside @layer base so it beats Tailwind font-family utilities
+   (font-sans / font-display) when the page is in Arabic. */
+:root[lang="ar"] :where(.font-display, .font-sans, .font-mono):not(.keep-latin):not(.keep-latin *),
+:root[lang="ar"] :where(h1, h2, h3, h4, h5, h6):not(.keep-latin):not(.keep-latin *) {
+  font-family: var(--font-arabic);
+}
+
+:root[lang="ar"] .keep-latin,
+:root[lang="ar"] .keep-latin * {
+  font-family: var(--font-display);
+}
