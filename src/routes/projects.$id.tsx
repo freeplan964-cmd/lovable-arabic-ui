@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ProjectDetailSkeleton } from "@/components/ui/Skeletons";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { IMAGE_SIZES } from "@/lib/image";
+import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/projects/$id")({
   head: ({ params }) => {
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/projects/$id")({
 
 export function ProjectDetail() {
   const { id } = Route.useParams();
+  const { tr } = useI18n();
   const project = projects.find((p) => p.id === id);
 
   if (!project) {
@@ -37,7 +39,7 @@ export function ProjectDetail() {
       <div className="min-h-screen flex flex-col select-none">
         <Navbar />
         <div className="flex-1 flex flex-col items-center justify-center py-32 text-center">
-          <h1 className="font-display text-4xl font-bold text-foreground mb-4">Project Not Found</h1>
+          <h1 className="font-display text-4xl font-bold text-foreground mb-4">{tr("project.notFound.title")}</h1>
           <Link
             to="/projects"
             className="inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
@@ -154,7 +156,7 @@ export function ProjectDetail() {
                 {/* Subtle background glow */}
                 <div className="absolute -top-24 -right-24 size-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
                 
-                <h3 className="font-display text-2xl font-black uppercase mb-8 tracking-wide">Project Brief</h3>
+                <h3 className="font-display text-2xl font-black uppercase mb-8 tracking-wide">{tr("project.detail.brief")}</h3>
                 
                 <div className="space-y-8 relative z-10">
                   {project.client && (
@@ -163,7 +165,7 @@ export function ProjectDetail() {
                         <Briefcase className="size-5" />
                       </div>
                       <div>
-                        <div className="text-[10px] font-black tracking-widest uppercase text-foreground/50 mb-1.5">Client</div>
+                        <div className="text-[10px] font-black tracking-widest uppercase text-foreground/50 mb-1.5">{tr("project.detail.client")}</div>
                         <div className="font-bold text-lg">{project.client}</div>
                       </div>
                     </div>
@@ -175,7 +177,7 @@ export function ProjectDetail() {
                         <Database className="size-5" />
                       </div>
                       <div>
-                        <div className="text-[10px] font-black tracking-widest uppercase text-foreground/50 mb-1.5">Database Engine</div>
+                        <div className="text-[10px] font-black tracking-widest uppercase text-foreground/50 mb-1.5">{tr("project.detail.db")}</div>
                         <div className="font-bold text-lg">{project.database}</div>
                       </div>
                     </div>
@@ -186,7 +188,7 @@ export function ProjectDetail() {
                       <Globe className="size-5" />
                     </div>
                     <div>
-                      <div className="text-[10px] font-black tracking-widest uppercase text-foreground/50 mb-1.5">Launch Status</div>
+                      <div className="text-[10px] font-black tracking-widest uppercase text-foreground/50 mb-1.5">{tr("project.detail.status")}</div>
                       <div className="font-bold text-lg">{hasLiveSite ? "Live in Production" : "Archived / Local"}</div>
                     </div>
                   </div>
@@ -202,7 +204,7 @@ export function ProjectDetail() {
                       className="group w-full inline-flex justify-center items-center gap-3 rounded-full bg-primary px-6 py-4 font-sans text-xs font-black tracking-widest text-primary-foreground uppercase shadow-lg hover:shadow-primary/25 transition-all hover:scale-[1.02]"
                     >
                       <ExternalLink className="size-4" />
-                      Visit Live Site
+                      {tr("project.detail.visit")}
                     </a>
                   )}
                   {project.github && (
@@ -213,7 +215,7 @@ export function ProjectDetail() {
                       className="group w-full inline-flex justify-center items-center gap-3 rounded-full border border-border bg-foreground/5 px-6 py-4 font-sans text-xs font-black tracking-widest text-foreground uppercase hover:bg-foreground/10 transition-all"
                     >
                       <Github className="size-4" />
-                      View Source Code
+                      {tr("project.detail.source")}
                     </a>
                   )}
                 </div>
@@ -223,7 +225,7 @@ export function ProjectDetail() {
 
           {/* Enhanced Prev/Next Navigation */}
           <div className="mt-32 pt-16 border-t border-border">
-            <h3 className="text-center font-display text-2xl font-black uppercase text-foreground/50 mb-12">Continue Exploring</h3>
+            <h3 className="text-center font-display text-2xl font-black uppercase text-foreground/50 mb-12">{tr("project.detail.continue")}</h3>
             <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
               {prevProject ? (
                 <Link
@@ -234,7 +236,7 @@ export function ProjectDetail() {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10">
                     <div className="flex items-center gap-2 font-sans text-[10px] font-black tracking-widest text-primary uppercase mb-3">
-                      <ArrowLeft className="size-3 rtl:rotate-180" /> PREVIOUS PROJECT
+                      <ArrowLeft className="size-3 rtl:rotate-180" /> {tr("project.detail.prev")}
                     </div>
                     <h4 className="font-display text-2xl md:text-3xl font-black uppercase text-card-foreground">
                       {prevProject.title}
@@ -253,7 +255,7 @@ export function ProjectDetail() {
                   <div className="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col items-end">
                     <div className="flex items-center gap-2 font-sans text-[10px] font-black tracking-widest text-primary uppercase mb-3">
-                      NEXT PROJECT <ArrowRight className="size-3 rtl:rotate-180" />
+                      {tr("project.detail.next")} <ArrowRight className="size-3 rtl:rotate-180" />
                     </div>
                     <h4 className="font-display text-2xl md:text-3xl font-black uppercase text-card-foreground">
                       {nextProject.title}
