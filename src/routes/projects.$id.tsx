@@ -45,7 +45,7 @@ export function ProjectDetail() {
             className="inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
           >
             <ArrowLeft className="size-4 rtl:rotate-180" />
-            {tr("project.detail.back")}
+            {tr("project.notFound.back")}
           </Link>
         </div>
         <Footer />
@@ -76,7 +76,7 @@ export function ProjectDetail() {
               className="group inline-flex items-center gap-2 text-xs font-black tracking-widest uppercase text-foreground/60 hover:text-primary transition-colors"
             >
               <ArrowLeft className="size-4 transition-transform group-hover:-translate-x-1 rtl:rotate-180" />
-              {tr("project.detail.backAll")}
+              {tr("project.detail.back")}
             </Link>
           </div>
 
