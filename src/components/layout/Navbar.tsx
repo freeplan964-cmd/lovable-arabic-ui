@@ -130,20 +130,15 @@ export function Navbar() {
           >
             <Sun
               className={`absolute size-3.5 text-accent transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
-                theme === "dark"
-                  ? "rotate-0 scale-100 opacity-100"
-                  : "-rotate-90 scale-0 opacity-0"
+                theme === "dark" ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
               }`}
             />
             <Moon
               className={`absolute size-3.5 text-accent transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
-                theme === "dark"
-                  ? "rotate-90 scale-0 opacity-0"
-                  : "rotate-0 scale-100 opacity-100"
+                theme === "dark" ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
               }`}
             />
           </button>
-
 
           {/* Language Switcher */}
           <button

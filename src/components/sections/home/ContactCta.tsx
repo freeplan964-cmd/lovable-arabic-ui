@@ -14,7 +14,7 @@ export function ContactCta() {
               <br />
               that scales
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-card-foreground/70">
+            <p className="mx-auto mt-6 max-w-xl type-lead text-card-foreground/70">
               Tell me about your marketplace and I&apos;ll come back with a concrete plan.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

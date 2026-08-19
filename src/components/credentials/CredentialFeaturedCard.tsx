@@ -45,9 +45,7 @@ export function CredentialFeaturedCard({
         <Icon className="size-8 text-primary" />
       </motion.div>
 
-      <h3 className="mb-3 type-h3 text-card-foreground">
-        {item.title[lang]}
-      </h3>
+      <h3 className="mb-3 type-h3 text-card-foreground">{item.title[lang]}</h3>
 
       <p className="mb-6 max-w-[34ch] type-body text-balance text-card-foreground/85">
         {item.summary[lang]}
@@ -99,9 +97,7 @@ export function CredentialFeaturedCard({
             </div>
 
             {item.credentialId && (
-              <p className="mt-3 mb-1 type-micro text-card-foreground/60">
-                {item.credentialId}
-              </p>
+              <p className="mt-3 mb-1 type-micro text-card-foreground/60">{item.credentialId}</p>
             )}
           </motion.div>
         )}
@@ -121,9 +117,7 @@ export function CredentialFeaturedCard({
             <Play className="ms-0.5 size-3 fill-primary-foreground text-primary-foreground" />
           </motion.span>
         </span>
-        <span className="type-label text-foreground">
-          {detailsLabel}
-        </span>
+        <span className="type-label text-foreground">{detailsLabel}</span>
       </button>
     </motion.div>
   );

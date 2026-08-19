@@ -72,9 +72,7 @@ export function ProjectProcess({ detail }: { detail: ProjectDetailContent }) {
             <span className="type-micro absolute -start-[2.55rem] flex size-8 items-center justify-center rounded-full border border-border bg-card font-mono text-primary">
               {step.phase}
             </span>
-            <h3 className="type-h4 mb-2 text-foreground">
-              {step.title}
-            </h3>
+            <h3 className="type-h4 mb-2 text-foreground">{step.title}</h3>
             <p className="type-body text-foreground/60">{step.description}</p>
           </li>
         ))}

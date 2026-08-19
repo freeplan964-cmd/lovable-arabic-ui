@@ -40,13 +40,9 @@ export function ProjectDetailHeader({ project }: { project: Project }) {
           ))}
         </div>
 
-        <h1 className="type-h1 mb-8">
-          {L.projectTitle(project)}
-        </h1>
+        <h1 className="type-h1 mb-8">{L.projectTitle(project)}</h1>
 
-        <p className="type-lead max-w-4xl text-foreground/70">
-          {L.projectDescription(project)}
-        </p>
+        <p className="type-lead max-w-4xl text-foreground/70">{L.projectDescription(project)}</p>
       </header>
     </>
   );

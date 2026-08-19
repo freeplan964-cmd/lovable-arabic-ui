@@ -36,12 +36,8 @@ export function RelatedProjects({ projects }: { projects: Project[] }) {
               />
             </div>
             <div className="p-6">
-              <div className="type-micro mb-2 text-primary">
-                {L.category(item.category)}
-              </div>
-              <h4 className="type-h3 text-card-foreground">
-                {L.projectTitle(item)}
-              </h4>
+              <div className="type-micro mb-2 text-primary">{L.category(item.category)}</div>
+              <h4 className="type-h3 text-card-foreground">{L.projectTitle(item)}</h4>
               <p className="type-body mt-2 line-clamp-2 text-foreground/60">
                 {L.projectDescription(item)}
               </p>

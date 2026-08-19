@@ -12,6 +12,7 @@ import {
   ChevronDown,
   ShieldCheck,
 } from "lucide-react";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useI18n } from "@/lib/i18n";
 import { credentials, credentialTabs, type CredentialTab } from "@/data";
 
@@ -57,20 +58,7 @@ export function ExperiencePreview() {
       className="w-full bg-background py-20 px-4 sm:px-8 md:px-12 text-foreground"
     >
       <div className="mx-auto max-w-5xl">
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 24 }}
-          whileInView={reduce ? {} : { opacity: 1, y: 0 }}
-
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5, ease: EASE }}
-        >
-          <h2 className="type-h2 text-center">
-            {tr("events.title")}
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center type-lead text-muted-foreground">
-            {tr("events.desc")}
-          </p>
-        </motion.div>
+        <SectionHeading title={tr("events.title")} description={tr("events.desc")} />
 
         {/* Tabs */}
         <div
@@ -175,9 +163,7 @@ export function ExperiencePreview() {
                       </div>
 
                       <div className="min-w-0">
-                        <h3 className="type-h4">
-                          {item.title[lang]}
-                        </h3>
+                        <h3 className="type-h4">{item.title[lang]}</h3>
                         <p
                           className={`mt-1 type-meta ${
                             featured ? "opacity-80" : "text-muted-foreground"

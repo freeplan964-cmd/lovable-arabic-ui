@@ -9,9 +9,7 @@ export function ProjectOverview({ detail }: { detail: ProjectDetailContent }) {
   return (
     <section>
       <DetailSectionHeader icon={Layers} title={tr("project.detail.overview")} />
-      <p className="type-h3 mb-6 text-foreground">
-        {detail.tagline}
-      </p>
+      <p className="type-h3 mb-6 text-foreground">{detail.tagline}</p>
       <div className="space-y-5">
         {detail.overview.map((paragraph) => (
           <p key={paragraph} className="type-lead text-foreground/70">
@@ -73,9 +71,7 @@ export function ProjectFeatures({ detail }: { detail: ProjectDetailContent }) {
             <div className="type-micro mb-3 font-mono text-primary normal-case">
               {String(index + 1).padStart(2, "0")}
             </div>
-            <h3 className="type-h4 mb-2 text-card-foreground">
-              {feature.title}
-            </h3>
+            <h3 className="type-h4 mb-2 text-card-foreground">{feature.title}</h3>
             <p className="type-body text-foreground/60">{feature.description}</p>
           </div>
         ))}

@@ -6,12 +6,8 @@ export function ProjectHighlights({ highlights }: { highlights: ProjectHighlight
     <div className="mb-16 grid grid-cols-2 gap-4 lg:grid-cols-4">
       {highlights.map((item) => (
         <div key={item.label} className="rounded-2xl border border-border bg-card p-5 md:p-6">
-          <div className="type-micro mb-2 text-foreground/50">
-            {item.label}
-          </div>
-          <div className="type-h4 text-card-foreground">
-            {item.value}
-          </div>
+          <div className="type-micro mb-2 text-foreground/50">{item.label}</div>
+          <div className="type-h4 text-card-foreground">{item.value}</div>
           {item.hint && (
             <div dir="ltr" className="type-micro mt-1.5 text-foreground/50 keep-latin normal-case">
               {item.hint}

@@ -50,7 +50,14 @@ type Social = (typeof socials)[number];
  * Footer social tile: static lucide glyph by default, swapped for a matching
  * Lottie that replays on every hover / keyboard focus.
  */
-function SocialTile({ Icon, lottie, label, href, bgClass, featured }: Social & { featured?: boolean }) {
+function SocialTile({
+  Icon,
+  lottie,
+  label,
+  href,
+  bgClass,
+  featured,
+}: Social & { featured?: boolean }) {
   const [plays, setPlays] = useState(0);
   const [active, setActive] = useState(false);
 
@@ -122,7 +129,7 @@ export function Footer() {
 
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6 relative z-10">
               {/* Headline */}
-              <h2 className="type-h2-lg text-card-foreground text-center md:text-start">
+              <h2 className="type-h2 text-card-foreground text-center md:text-start">
                 {tr("footer.headline1")}
                 <br />
                 {tr("footer.headline2")}

@@ -30,7 +30,12 @@ export function PageShell({
   disableOverflowX = false,
 }: PageShellProps) {
   return (
-    <div className={cn("flex min-h-screen select-none flex-col bg-background text-foreground", !disableOverflowX && "overflow-x-hidden")}>
+    <div
+      className={cn(
+        "flex min-h-screen select-none flex-col bg-background text-foreground",
+        !disableOverflowX && "overflow-x-hidden",
+      )}
+    >
       <Navbar />
       <main
         ref={mainRef}

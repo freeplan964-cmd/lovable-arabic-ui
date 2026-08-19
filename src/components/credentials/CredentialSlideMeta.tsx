@@ -11,12 +11,7 @@ interface CredentialSlideMetaProps {
 }
 
 /** Section title, slide counter and per-slide metadata. */
-export function CredentialSlideMeta({
-  slide,
-  activeIdx,
-  total,
-  reduce,
-}: CredentialSlideMetaProps) {
+export function CredentialSlideMeta({ slide, activeIdx, total, reduce }: CredentialSlideMetaProps) {
   const { tr, lang } = useI18n();
 
   return (
@@ -28,9 +23,7 @@ export function CredentialSlideMeta({
       transition={{ duration: 0.6, ease: EASE }}
     >
       <div className="flex items-end gap-3">
-        <span className="pb-3 type-label text-foreground/60">
-          No
-        </span>
+        <span className="pb-3 type-label text-foreground/60">No</span>
         <span className="type-h2 relative inline-block overflow-hidden leading-none">
           {/* Invisible sizer keeps the animated digits from being clipped */}
           <span className="invisible block leading-none" aria-hidden="true">
@@ -49,9 +42,7 @@ export function CredentialSlideMeta({
             </motion.span>
           </AnimatePresence>
         </span>
-        <span className="pb-2 type-h3 text-foreground/40">
-          /{String(total).padStart(2, "0")}
-        </span>
+        <span className="pb-2 type-h3 text-foreground/40">/{String(total).padStart(2, "0")}</span>
       </div>
 
       <h2 className="type-h2 text-balance text-foreground">

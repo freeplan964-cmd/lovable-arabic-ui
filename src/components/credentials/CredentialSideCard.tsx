@@ -25,12 +25,8 @@ export function CredentialSideCard({ item, lang, reduce, index }: CredentialSide
       <div className="mb-3 grid size-12 place-items-center rounded-xl bg-foreground/10 text-foreground">
         <Icon className="size-6 text-primary" />
       </div>
-      <h4 className="mb-2 type-h4 text-balance text-card-foreground">
-        {item.title[lang]}
-      </h4>
-      <p className="mb-3 type-body break-words text-card-foreground/70">
-        {item.org[lang]}
-      </p>
+      <h4 className="mb-2 type-h4 text-balance text-card-foreground">{item.title[lang]}</h4>
+      <p className="mb-3 type-body break-words text-card-foreground/70">{item.org[lang]}</p>
       <span className="rounded-xl border border-border bg-foreground/10 px-3 py-0.5 type-micro text-primary">
         {item.year}
       </span>

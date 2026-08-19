@@ -55,9 +55,7 @@ function PagerCard({ project, direction }: { project: Project; direction: "prev"
             </>
           )}
         </div>
-        <h4 className="type-h3 text-card-foreground">
-          {projectTitle(project)}
-        </h4>
+        <h4 className="type-h3 text-card-foreground">{projectTitle(project)}</h4>
       </div>
     </Link>
   );
