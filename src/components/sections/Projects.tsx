@@ -3,6 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Code2, ExternalLink, Rocket } from "lucide-react";
 import { projects } from "@/data";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useI18n } from "@/lib/i18n";
 import { useLocalizedContent } from "@/lib/localize";
 
@@ -21,9 +22,7 @@ export function Projects() {
       className="w-full bg-background py-16 px-4 sm:px-8 md:px-12 text-foreground select-none"
     >
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-8 type-h2 text-foreground text-center md:text-start">
-          {tr("works.title")}
-        </h2>
+        <SectionHeading title={tr("works.title")} align="start" />
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
           {featuredWorks.map((project, index) => {
             const num = `0${index + 1}`;

@@ -122,7 +122,7 @@ export function Footer() {
 
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6 relative z-10">
               {/* Headline */}
-              <h2 className="type-h2-lg text-card-foreground text-center md:text-start">
+              <h2 className="type-h2 text-card-foreground text-center md:text-start">
                 {tr("footer.headline1")}
                 <br />
                 {tr("footer.headline2")}

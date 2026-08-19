@@ -31,7 +31,7 @@ export function CtaBand({
                 {eyebrow}
               </span>
             ) : null}
-            <h2 className="mt-3 type-h2 text-card-foreground">
+            <h2 className="mt-3 type-h2-lg text-card-foreground">
               {title}
             </h2>
             {description ? (

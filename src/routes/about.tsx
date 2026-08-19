@@ -6,6 +6,7 @@ import { PageIntro } from "@/components/ui/PageIntro";
 import { LottieAside } from "@/components/ui/LottieAside";
 import { CtaLink, CtaRow } from "@/components/ui/CtaLink";
 import { pageSeo, pageTitle } from "@/lib/seo";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useI18n } from "@/lib/i18n";
 
 const STATS = [
@@ -65,9 +66,7 @@ function AboutPage() {
 
 
       <section className="py-12">
-        <h2 className="mb-8 text-center type-h2 text-foreground">
-          {tr("about.page.approach")}
-        </h2>
+        <SectionHeading title={tr("about.page.approach")} />
         <div className="grid gap-6 sm:grid-cols-2">
           {PRINCIPLES.map((principle) => (
             <div
