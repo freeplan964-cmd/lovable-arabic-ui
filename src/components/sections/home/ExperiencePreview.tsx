@@ -163,9 +163,7 @@ export function ExperiencePreview() {
                       </div>
 
                       <div className="min-w-0">
-                        <h3 className="type-h4">
-                          {item.title[lang]}
-                        </h3>
+                        <h3 className="type-h4">{item.title[lang]}</h3>
                         <p
                           className={`mt-1 type-meta ${
                             featured ? "opacity-80" : "text-muted-foreground"

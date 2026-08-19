@@ -50,17 +50,12 @@ function SkillsPage() {
           {skillGroups.map(({ title, icon, skills }) => {
             const Icon: LucideIcon = SKILL_ICONS[icon] ?? Code;
             return (
-              <div
-                key={title}
-                className="rounded-2xl border border-border bg-card p-8 shadow-glow"
-              >
+              <div key={title} className="rounded-2xl border border-border bg-card p-8 shadow-glow">
                 <div className="mb-6 flex items-center gap-3">
                   <div className="grid size-10 place-items-center rounded-xl border border-border bg-foreground/10 text-primary">
                     <Icon className="size-5" />
                   </div>
-                  <h2 className="type-h3 text-card-foreground">
-                    {skillGroupTitle(title)}
-                  </h2>
+                  <h2 className="type-h3 text-card-foreground">{skillGroupTitle(title)}</h2>
                 </div>
 
                 <div className="flex flex-wrap gap-2.5">
@@ -90,7 +85,6 @@ function SkillsPage() {
           </CtaLink>
           <CtaLink to="/contact">{tr("skills.page.contactCta")}</CtaLink>
         </CtaBand>
-
       </section>
     </PageShell>
   );

@@ -27,7 +27,11 @@ export function ProjectsPagination({ page, totalPages, onPageChange }: ProjectsP
       aria-label={tr("projects.index.pagination")}
       className="flex flex-wrap items-center justify-center gap-3"
     >
-      <button onClick={() => onPageChange(Math.max(1, page - 1))} disabled={page === 1} className={stepButton}>
+      <button
+        onClick={() => onPageChange(Math.max(1, page - 1))}
+        disabled={page === 1}
+        className={stepButton}
+      >
         <ChevronLeft className="size-4 text-primary rtl:rotate-180" />
         {tr("projects.index.prev")}
       </button>

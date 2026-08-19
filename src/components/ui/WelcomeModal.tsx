@@ -103,17 +103,11 @@ export function WelcomeModal() {
             {tr("welcome.eyebrow")}
           </span>
 
-          <h2
-            id="welcome-modal-title"
-            className="mt-5 type-h2 text-foreground"
-          >
+          <h2 id="welcome-modal-title" className="mt-5 type-h2 text-foreground">
             {tr("welcome.title")}
           </h2>
 
-          <p
-            id="welcome-modal-body"
-            className="mt-4 type-lead text-muted-foreground"
-          >
+          <p id="welcome-modal-body" className="mt-4 type-lead text-muted-foreground">
             {tr("welcome.body")}
           </p>
 

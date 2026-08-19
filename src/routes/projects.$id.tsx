@@ -80,9 +80,7 @@ function ProjectNotFound() {
   return (
     <PageShell contained={false}>
       <div className="flex flex-1 flex-col items-center justify-center py-32 text-center">
-        <h1 className="mb-4 type-h1 text-foreground">
-          {tr("project.notFound.title")}
-        </h1>
+        <h1 className="mb-4 type-h1 text-foreground">{tr("project.notFound.title")}</h1>
         <CtaLink to="/projects" variant="secondary" withArrow={false}>
           <ArrowLeft className="size-4 rtl:rotate-180" />
           {tr("project.notFound.back")}

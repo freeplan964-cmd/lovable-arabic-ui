@@ -21,7 +21,10 @@ export function CareerTimeline() {
   const ActiveIcon = tabIcons[activeTab];
 
   return (
-    <section id="events" className="w-full bg-background px-4 py-20 text-foreground sm:px-8 md:px-12">
+    <section
+      id="events"
+      className="w-full bg-background px-4 py-20 text-foreground sm:px-8 md:px-12"
+    >
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 24 }}
@@ -29,9 +32,7 @@ export function CareerTimeline() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: EASE }}
         >
-          <h2 className="type-h2 text-center">
-            {tr("events.title")}
-          </h2>
+          <h2 className="type-h2 text-center">{tr("events.title")}</h2>
           <p className="type-lead mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
             {tr("events.desc")}
           </p>

@@ -11,8 +11,6 @@ import { LottieAside } from "@/components/ui/LottieAside";
 import { useI18n } from "@/lib/i18n";
 import { prefetchLottie } from "@/lib/lottie-cache";
 
-
-
 const schema = z.object({
   name: z.string().min(2, "Please enter your name"),
   email: z.string().email("Please enter a valid email"),
@@ -52,109 +50,117 @@ export function Contact({ showHeading = true }: { showHeading?: boolean } = {}) 
         </Reveal>
 
         <LottieAside src="/lottie/contact-side.lottie">
-        <Reveal>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            // Warm the success animation as soon as the user starts typing, so
-            // it is already cached when the form flips to the sent state.
-            onFocusCapture={() => prefetchLottie("/lottie/contact-success.lottie")}
-            className="rounded-2xl bg-card border border-border shadow-glow space-y-5 p-7"
-          >
-            <div>
-              <label
-                htmlFor="contact-name"
-                className="mb-2 block type-body-strong text-card-foreground"
-              >
-                {tr("contact.name")}
-              </label>
-              <input
-                id="contact-name"
-                autoComplete="name"
-                aria-invalid={Boolean(errors.name)}
-                aria-describedby={errors.name ? "contact-name-error" : undefined}
-                {...register("name")}
-                className={fieldClass}
-                placeholder="Jane Doe"
-              />
-              {errors.name && (
-                <p id="contact-name-error" role="alert" className="mt-1.5 type-body text-destructive">
-                  {errors.name.message}
-                </p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor="contact-email"
-                className="mb-2 block type-body-strong text-card-foreground"
-              >
-                {tr("contact.email")}
-              </label>
-              <input
-                id="contact-email"
-                type="email"
-                autoComplete="email"
-                aria-invalid={Boolean(errors.email)}
-                aria-describedby={errors.email ? "contact-email-error" : undefined}
-                {...register("email")}
-                className={fieldClass}
-                placeholder="jane@company.com"
-              />
-              {errors.email && (
-                <p
-                  id="contact-email-error"
-                  role="alert"
-                  className="mt-1.5 type-body text-destructive"
-                >
-                  {errors.email.message}
-                </p>
-              )}
-            </div>
-
-            <div>
-              <label
-                htmlFor="contact-message"
-                className="mb-2 block type-body-strong text-card-foreground"
-              >
-                {tr("contact.message")}
-              </label>
-              <textarea
-                id="contact-message"
-                aria-invalid={Boolean(errors.message)}
-                aria-describedby={errors.message ? "contact-message-error" : undefined}
-                {...register("message")}
-                rows={5}
-                className={`${fieldClass} resize-none`}
-                placeholder="Tell me about your marketplace..."
-              />
-              {errors.message && (
-                <p
-                  id="contact-message-error"
-                  role="alert"
-                  className="mt-1.5 type-body text-destructive"
-                >
-                  {errors.message.message}
-                </p>
-              )}
-            </div>
-
-            {sent && (
-              <div className="flex justify-center">
-                <LottieIcon src="/lottie/contact-success.lottie" className="size-24" playOnce loop={false} />
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 type-label text-primary-foreground shadow-md transition-all hover:scale-105 disabled:opacity-60"
+          <Reveal>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              // Warm the success animation as soon as the user starts typing, so
+              // it is already cached when the form flips to the sent state.
+              onFocusCapture={() => prefetchLottie("/lottie/contact-success.lottie")}
+              className="rounded-2xl bg-card border border-border shadow-glow space-y-5 p-7"
             >
-              {tr("contact.send")}
-              <Send className="size-4 transition-transform group-hover:translate-x-0.5" />
-            </button>
-          </form>
-        </Reveal>
+              <div>
+                <label
+                  htmlFor="contact-name"
+                  className="mb-2 block type-body-strong text-card-foreground"
+                >
+                  {tr("contact.name")}
+                </label>
+                <input
+                  id="contact-name"
+                  autoComplete="name"
+                  aria-invalid={Boolean(errors.name)}
+                  aria-describedby={errors.name ? "contact-name-error" : undefined}
+                  {...register("name")}
+                  className={fieldClass}
+                  placeholder="Jane Doe"
+                />
+                {errors.name && (
+                  <p
+                    id="contact-name-error"
+                    role="alert"
+                    className="mt-1.5 type-body text-destructive"
+                  >
+                    {errors.name.message}
+                  </p>
+                )}
+              </div>
 
+              <div>
+                <label
+                  htmlFor="contact-email"
+                  className="mb-2 block type-body-strong text-card-foreground"
+                >
+                  {tr("contact.email")}
+                </label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  autoComplete="email"
+                  aria-invalid={Boolean(errors.email)}
+                  aria-describedby={errors.email ? "contact-email-error" : undefined}
+                  {...register("email")}
+                  className={fieldClass}
+                  placeholder="jane@company.com"
+                />
+                {errors.email && (
+                  <p
+                    id="contact-email-error"
+                    role="alert"
+                    className="mt-1.5 type-body text-destructive"
+                  >
+                    {errors.email.message}
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <label
+                  htmlFor="contact-message"
+                  className="mb-2 block type-body-strong text-card-foreground"
+                >
+                  {tr("contact.message")}
+                </label>
+                <textarea
+                  id="contact-message"
+                  aria-invalid={Boolean(errors.message)}
+                  aria-describedby={errors.message ? "contact-message-error" : undefined}
+                  {...register("message")}
+                  rows={5}
+                  className={`${fieldClass} resize-none`}
+                  placeholder="Tell me about your marketplace..."
+                />
+                {errors.message && (
+                  <p
+                    id="contact-message-error"
+                    role="alert"
+                    className="mt-1.5 type-body text-destructive"
+                  >
+                    {errors.message.message}
+                  </p>
+                )}
+              </div>
+
+              {sent && (
+                <div className="flex justify-center">
+                  <LottieIcon
+                    src="/lottie/contact-success.lottie"
+                    className="size-24"
+                    playOnce
+                    loop={false}
+                  />
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 type-label text-primary-foreground shadow-md transition-all hover:scale-105 disabled:opacity-60"
+              >
+                {tr("contact.send")}
+                <Send className="size-4 transition-transform group-hover:translate-x-0.5" />
+              </button>
+            </form>
+          </Reveal>
         </LottieAside>
       </div>
     </section>

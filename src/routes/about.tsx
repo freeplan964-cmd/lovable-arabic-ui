@@ -49,21 +49,15 @@ function AboutPage() {
                 key={stat.key}
                 className="rounded-2xl border border-border bg-card p-6 text-center shadow-lg"
               >
-                <div
-                  dir="ltr"
-                  className="type-h2 text-card-foreground"
-                >
+                <div dir="ltr" className="type-h2 text-card-foreground">
                   {stat.value}
                 </div>
-                <div className="mt-1 type-micro text-card-foreground/80">
-                  {tr(stat.key)}
-                </div>
+                <div className="mt-1 type-micro text-card-foreground/80">{tr(stat.key)}</div>
               </div>
             ))}
           </div>
         </LottieAside>
       </section>
-
 
       <section className="py-12">
         <SectionHeading title={tr("about.page.approach")} />
@@ -77,9 +71,7 @@ function AboutPage() {
                 <CheckCircle2 className="size-5 text-primary" />
                 {tr(principle.titleKey)}
               </h3>
-              <p className="type-body text-card-foreground/85">
-                {tr(principle.bodyKey)}
-              </p>
+              <p className="type-body text-card-foreground/85">{tr(principle.bodyKey)}</p>
             </div>
           ))}
         </div>

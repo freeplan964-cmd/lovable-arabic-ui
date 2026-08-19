@@ -42,9 +42,7 @@ export function ProjectCard({ project, index, view = "grid" }: ProjectCardProps)
       <div className="flex flex-1 flex-col gap-4 pt-5">
         <header className="min-w-0">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="type-h3 text-card-foreground">
-              {projectTitle(project)}
-            </h3>
+            <h3 className="type-h3 text-card-foreground">{projectTitle(project)}</h3>
             {project.status && (
               <span className="type-micro shrink-0 rounded-xl bg-primary px-3 py-0.5 text-primary-foreground">
                 {projectStatus(project.status)}

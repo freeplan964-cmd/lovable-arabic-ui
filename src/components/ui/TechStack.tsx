@@ -21,12 +21,8 @@ export function TechStack({ techs, variant = "grid", className = "" }: TechStack
   }
 
   return (
-    <div
-      className={`rounded-2xl bg-card p-8 border border-border shadow-glow ${className}`}
-    >
-      <h2 className="type-h2 text-card-foreground mb-6">
-        Tech Stack
-      </h2>
+    <div className={`rounded-2xl bg-card p-8 border border-border shadow-glow ${className}`}>
+      <h2 className="type-h2 text-card-foreground mb-6">Tech Stack</h2>
       <div className="flex flex-wrap gap-3">
         {techs.map((tech) => (
           <span

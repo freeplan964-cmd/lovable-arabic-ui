@@ -39,7 +39,16 @@ export const Route = createFileRoute("/")({
 
     return {
       ...seo,
-      links: [...seo.links, { rel: "preload", as: "image", type: "image/avif", href: heroIsoAvif, fetchPriority: "high" }],
+      links: [
+        ...seo.links,
+        {
+          rel: "preload",
+          as: "image",
+          type: "image/avif",
+          href: heroIsoAvif,
+          fetchPriority: "high",
+        },
+      ],
     };
   },
   component: Index,

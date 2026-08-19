@@ -50,9 +50,7 @@ export function LottieIcon({
   const [Player, setPlayer] = useState<
     typeof import("@lottiefiles/dotlottie-react").DotLottieReact | null
   >(null);
-  const [data, setData] = useState<ArrayBuffer | null>(
-    () => getCachedLottie(src) ?? null,
-  );
+  const [data, setData] = useState<ArrayBuffer | null>(() => getCachedLottie(src) ?? null);
 
   useEffect(() => {
     setData(getCachedLottie(src) ?? null);

@@ -37,9 +37,7 @@ export function ProjectRow({ project, index }: ProjectRowProps) {
       </div>
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-2">
-          <h3 className="type-h3 text-card-foreground">
-            {projectTitle(project)}
-          </h3>
+          <h3 className="type-h3 text-card-foreground">{projectTitle(project)}</h3>
           <Tag>{projectType(project.type)}</Tag>
           {project.client && <Tag {...latinProps}>{project.client}</Tag>}
         </div>

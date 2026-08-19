@@ -39,9 +39,7 @@ export function Projects() {
                   {/* Header Row */}
                   <div className="flex items-center justify-between mb-4 px-1">
                     <div>
-                      <span className="type-h3 text-card-foreground leading-none block">
-                        {num}
-                      </span>
+                      <span className="type-h3 text-card-foreground leading-none block">{num}</span>
                       <span className="type-micro text-card-foreground/80">
                         {category(project.category)}
                       </span>

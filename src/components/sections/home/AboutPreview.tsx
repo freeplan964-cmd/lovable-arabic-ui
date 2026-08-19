@@ -22,9 +22,7 @@ export function AboutPreview() {
                   </div>
                 </div>
                 <div className="grid place-items-center rounded-[6px] bg-foreground px-2.5 py-0.5 shadow-sm">
-                  <span className="type-wordmark text-background">
-                    MS
-                  </span>
+                  <span className="type-wordmark text-background">MS</span>
                 </div>
                 <div className="flex flex-col text-start type-micro text-foreground">
                   <span>MOSTAFA</span>
@@ -50,18 +48,14 @@ export function AboutPreview() {
                   to="/about"
                   className="group inline-flex items-center justify-center gap-3 rounded-xl bg-primary px-6 py-3 text-primary-foreground shadow-md transition-transform hover:scale-105"
                 >
-                  <span className="type-label">
-                    ABOUT ME
-                  </span>
+                  <span className="type-label">ABOUT ME</span>
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1 rtl:rotate-180" />
                 </Link>
                 <Link
                   to="/projects"
                   className="group inline-flex items-center justify-center gap-3 rounded-xl bg-background px-6 py-3 shadow-md border border-border transition-transform hover:scale-105"
                 >
-                  <span className="type-label text-foreground">
-                    VIEW CASES
-                  </span>
+                  <span className="type-label text-foreground">VIEW CASES</span>
                   <ArrowRight className="size-4 text-foreground transition-transform group-hover:translate-x-1 rtl:rotate-180" />
                 </Link>
               </div>
@@ -74,12 +68,12 @@ export function AboutPreview() {
                 <picture>
                   <source type="image/avif" srcSet={portraitAvif} />
                   <img
-                  src={portraitWebp}
-                  alt="Portrait of Mostafa Samir"
-                  width={861}
-                  height={768}
-                  loading="lazy"
-                  className="relative z-10 w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]"
+                    src={portraitWebp}
+                    alt="Portrait of Mostafa Samir"
+                    width={861}
+                    height={768}
+                    loading="lazy"
+                    className="relative z-10 w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]"
                   />
                 </picture>
               </div>

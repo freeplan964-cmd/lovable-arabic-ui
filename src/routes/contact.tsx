@@ -8,7 +8,6 @@ import { LottieIcon } from "@/components/ui/LottieIcon";
 import { pageSeo, pageTitle } from "@/lib/seo";
 import { useI18n } from "@/lib/i18n";
 
-
 interface ContactChannel {
   Icon: LucideIcon;
   labelKey: string;
@@ -65,7 +64,6 @@ function ContactPage() {
         />
       </div>
 
-
       <section className="mb-8 py-6">
         <div className="grid gap-6 sm:grid-cols-3">
           {CHANNELS.map(({ Icon, labelKey, value, valueKey, href }) => (
@@ -76,9 +74,7 @@ function ContactPage() {
               <div className="mb-4 grid size-12 place-items-center rounded-xl border border-border bg-foreground/10 text-card-foreground">
                 <Icon className="size-5 text-primary" />
               </div>
-              <span className="mb-1 type-micro text-card-foreground/80">
-                {tr(labelKey)}
-              </span>
+              <span className="mb-1 type-micro text-card-foreground/80">{tr(labelKey)}</span>
               {href ? (
                 <a
                   href={href}

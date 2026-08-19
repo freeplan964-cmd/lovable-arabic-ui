@@ -50,7 +50,14 @@ type Social = (typeof socials)[number];
  * Footer social tile: static lucide glyph by default, swapped for a matching
  * Lottie that replays on every hover / keyboard focus.
  */
-function SocialTile({ Icon, lottie, label, href, bgClass, featured }: Social & { featured?: boolean }) {
+function SocialTile({
+  Icon,
+  lottie,
+  label,
+  href,
+  bgClass,
+  featured,
+}: Social & { featured?: boolean }) {
   const [plays, setPlays] = useState(0);
   const [active, setActive] = useState(false);
 

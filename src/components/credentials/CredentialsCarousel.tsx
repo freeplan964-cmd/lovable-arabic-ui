@@ -34,12 +34,7 @@ export function CredentialsCarousel() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:grid-rows-[auto_1fr_auto] lg:items-stretch lg:gap-10">
-          <CredentialSlideMeta
-            slide={slide}
-            activeIdx={activeIdx}
-            total={total}
-            reduce={reduce}
-          />
+          <CredentialSlideMeta slide={slide} activeIdx={activeIdx} total={total} reduce={reduce} />
 
           <AnimatePresence mode="wait" custom={dir} initial={false}>
             <motion.div

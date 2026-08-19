@@ -12,9 +12,7 @@ export function Hero() {
         {/* Left Column Text & Action */}
         <div className="relative z-10 text-center lg:text-start">
           {/* Eyebrow Label */}
-          <p className="type-in mb-4 eyebrow-wide text-primary">
-            {tr("hero.eyebrow")}
-          </p>
+          <p className="type-in mb-4 eyebrow-wide text-primary">{tr("hero.eyebrow")}</p>
 
           {/* Display headline */}
           <h1 className="type-in type-delay-1 type-display text-foreground">
@@ -25,8 +23,7 @@ export function Hero() {
           </h1>
 
           {/* Subtitle & Trophy Badge */}
-          <div className="type-in type-delay-2 mt-6 flex flex-col items-center lg:items-start gap-4"
-          >
+          <div className="type-in type-delay-2 mt-6 flex flex-col items-center lg:items-start gap-4">
             <div className="flex items-center gap-3">
               <p className="max-w-md type-lead text-foreground/90 text-center lg:text-start">
                 {tr("hero.subtitle")}
@@ -74,15 +71,15 @@ export function Hero() {
           <picture>
             <source type="image/avif" srcSet={heroIsoAvif} />
             <img
-            src={heroIso}
-            alt="Mostafa Samir Full Stack Engineer Workspace"
-            width={1200}
-            height={1104}
-            loading="eager"
-            decoding="sync"
-            fetchPriority="high"
-            draggable={false}
-            className="mx-auto w-full max-w-xl md:max-w-2xl animate-float drop-shadow-2xl"
+              src={heroIso}
+              alt="Mostafa Samir Full Stack Engineer Workspace"
+              width={1200}
+              height={1104}
+              loading="eager"
+              decoding="sync"
+              fetchPriority="high"
+              draggable={false}
+              className="mx-auto w-full max-w-xl md:max-w-2xl animate-float drop-shadow-2xl"
             />
           </picture>
         </div>

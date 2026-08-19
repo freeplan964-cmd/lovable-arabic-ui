@@ -28,9 +28,7 @@ export function ProjectBrief({ project, detail, hasLiveSite }: ProjectBriefProps
     <aside className="space-y-8 lg:sticky lg:top-24 lg:col-span-4 lg:self-start lg:h-fit">
       <div className="relative overflow-hidden rounded-3xl border border-border bg-card shadow-2xl">
         <div className="relative p-8 md:p-10">
-          <h3 className="type-h3 mb-10">
-            {tr("project.detail.brief")}
-          </h3>
+          <h3 className="type-h3 mb-10">{tr("project.detail.brief")}</h3>
 
           <div className="relative z-10 space-y-8">
             {project.client && (
@@ -107,9 +105,7 @@ function BriefRow({
         <Icon className="size-5" />
       </div>
       <div className="flex flex-col justify-center">
-        <div className="type-micro mb-0.5 text-muted-foreground">
-          {label}
-        </div>
+        <div className="type-micro mb-0.5 text-muted-foreground">{label}</div>
         <div className="type-body-strong text-foreground">{children}</div>
       </div>
     </div>
