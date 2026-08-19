@@ -12,6 +12,7 @@ import {
   ChevronDown,
   ShieldCheck,
 } from "lucide-react";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useI18n } from "@/lib/i18n";
 import { credentials, credentialTabs, type CredentialTab } from "@/data";
 
